@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velion - AXION-BX™ | Diagnóstico revolucionario</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Barra de navegación */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            color: #3b82f6;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 4rem 2rem;
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+        
+        .product-image {
+            flex: 1;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+        
+        .product-image img {
+            max-width: 100%;
+            max-height: 380px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        
+        .buy-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+        
+        .slogan {
+            font-size: 1.25rem;
+            color: #3b82f6;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin: 1rem 0;
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: #64748b;
+            display: block;
+            font-weight: normal;
+        }
+        
+        .buy-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+            width: fit-content;
+        }
+        
+        .buy-btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Sección de Objetivos */
+        .objectives {
+            background-color: #ffffff;
+            padding: 4rem 2rem;
+        }
+        
+        .objectives-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .goal-card {
+            background-color: #f0f9ff;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid #3b82f6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .goal-card h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        
+        /* Sección de Contacto */
+        .contact {
+            background-color: #f0f9ff;
+            padding: 4rem 2rem;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        
+        .contact-details {
+            margin-top: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            color: #3b82f6;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .team-list {
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            margin-bottom: 1.5rem;
+        }
+        
+        .team-member h4 {
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-member p {
+            color: #64748b;
+            margin: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e40af;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo-velion.png" alt="Logo Velion">
+                <h1>VELION</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#producto">Producto</a>
+                <a href="#objetivos">Objetivos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="producto" class="hero">
+        <div class="hero-container">
+            <div class="product-image">
+                <img src="axion-bx-product.png" alt="Dispositivo AXION-BX de Velion">
+            </div>
+            <div class="buy-section">
+                <h2>AXION-BX<sup>™</sup></h2>
+                <p class="slogan">Una gota de sangre, miles de respuestas</p>
+                <div class="price">
+                    2.499€ <span>(IVA incluido)</span>
+                </div>
+                <button class="buy-btn">COMPRAR AHORA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Objetivos -->
+    <section id="objetivos" class="objectives">
+        <div class="objectives-container">
+            <h2 class="section-title">Nuestros Objetivos</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <h3>Democratizar el diagnóstico</h3>
+                    <p>Hacer accesible la tecnología de alta precisión a todos los sistemas de salud, independientemente de su ubicación o recursos.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Reducción de tiempos</h3>
+                    <p>Acortar los procesos clínicos de semanas a minutos, permitiendo tratamientos más oportunos y efectivos.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Soluciones validadas</h3>
+                    <p>Desarrollar tecnología escalable y clínicamente validada, con producción certificada en Europa y EE.UU.</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Soporte integral</h3>
+                    <p>Ofrecer asistencia técnica y clínica 24/7 para garantizar el máximo rendimiento de nuestros sistemas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contacto@velion.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+34 123 456 789</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Barcelona, España</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Equipo Directivo</h3>
+                <div class="team-list">
+                    <div class="team-member">
+                        <h4>Davit Hakobyan</h4>
+                        <p>CEO & Co-fundador</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Ruben Arce Boluda</h4>
+                        <p>CO-CEO & Co-fundador</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Joel Trunk</h4>
+                        <p>CO-CEO & Co-fundador</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="copyright">© 2025 Velion Technologies. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
